@@ -4,9 +4,9 @@ import { Navigation } from 'swiper/modules'
 
 const REVIEWS = [
   { name: 'Mehedi', location: 'Riga, LV', text: 'One of my favorites. Liked it too much.', date: 'Oct 23, 2025', rating: 5 },
-  { name: 'Siyam', location: 'Dhaka, BD', text: 'Best electrolytes flavour; helps me drink more water.', date: 'Oct 21, 2025', rating: 5 },
+  { name: 'Siyam', location: 'Dhaka, BD', text: 'Best electrolytes flavour; helps me drink more.', date: 'Oct 21, 2025', rating: 5 },
   { name: 'Lourenço', location: 'Lisbon, PT', text: 'Very good! Better than plastic bottles.', date: 'Oct 18, 2025', rating: 5 },
-  { name: 'Shteryu', location: 'Sofia, BG', text: 'Perfect tiny boost of hydration and taste—winner.', date: 'Oct 16, 2025', rating: 5 },
+  { name: 'Shteryu', location: 'Sofia, BG', text: 'Perfect tiny boost of hydration and .', date: 'Oct 16, 2025', rating: 5 },
   { name: 'Eleni', location: 'Athens, GR', text: 'Love the flavours and subscription flexibility.', date: 'Oct 14, 2025', rating: 4 },
   { name: 'Jonas', location: 'Berlin, DE', text: 'Refreshing and convenient. Well tasted', date: 'Oct 12, 2025', rating: 4 },
 ]
@@ -65,7 +65,7 @@ export default function Reviews() {
               className="w-full overflow-hidden"
             >
               {REVIEWS.map((r, i) => (
-                <SwiperSlide key={i} className="!h-auto">
+                <SwiperSlide key={i} className="h-auto">
                   <article className="rounded-xl bg-neutral-50 p-5 ring-1 ring-neutral-200 m-1">
                     <header className="flex items-start justify-between">
                       <div className="text-sm font-semibold text-neutral-900">{r.name}{r.location ? `, ${r.location}` : ''}</div>

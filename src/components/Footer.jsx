@@ -1,12 +1,12 @@
 export default function Footer() {
   return (
     <footer className="border-t border-neutral-200 bg-white">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+      <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <div className="flex items-center gap-3">
-              <div className="h-8 w-8 rounded-lg bg-neutral-900" />
-              <span className="font-semibold tracking-tight">Ostren</span>
+            <div className="flex items-center">
+            <div className='w-10 h-10'><img src="/ostren.png" alt="" /></div>
+              <span className="font-semibold text-2xl tracking-tight -ml-1">stren</span>
             </div>
             <p className="mt-3 text-sm text-neutral-600 max-w-xs">Hydration made simple. Clean ingredients, bold flavour, premium feel.</p>
           </div>
@@ -32,8 +32,8 @@ export default function Footer() {
           <div>
             <h4 className="font-medium text-neutral-900">Newsletter</h4>
             <p className="mt-3 text-sm text-neutral-600">Get early access to drops and exclusive offers.</p>
-            <form className="mt-4 flex gap-2">
-              <input type="email" placeholder="you@example.com" className="h-10 flex-1 rounded-full border border-neutral-300 px-4 focus:outline-none focus:ring-2 focus:ring-neutral-900" />
+            <form className="mt-4 flex-wrap gap-2">
+              <input type="email" placeholder="you@example.com" className="h-10 flex-1 rounded-full border mb-1 border-neutral-300 px-4 focus:outline-none focus:ring-2 focus:ring-neutral-900" />
               <button className="h-10 rounded-full bg-neutral-900 px-5 text-white">Join</button>
             </form>
           </div>
