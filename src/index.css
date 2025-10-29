@@ -1,0 +1,40 @@
+@import "tailwindcss";
+@source "./index.html";
+@source "./src/**/*.{js,jsx,ts,tsx}";
+@import "swiper/css";
+@import "swiper/css/pagination";
+@import "swiper/css/navigation";
+
+@font-face {
+  font-family: "GT America";
+  src: url("/fonts/GT-America-Standard-Light-Trial.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GT America";
+  src: url("/fonts/GT-America-Standard-Regular-Trial.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GT America";
+  src: url("/fonts/GT-America-Standard-Medium-Trial.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GT America";
+  src: url("/fonts/GT-America-Standard-Bold-Trial.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+html, body {
+  font-family: "GT America", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
