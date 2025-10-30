@@ -50,7 +50,7 @@ export default function Hero() {
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
             <div 
-              className="relative h-[70vh] min-h-[500px] bg-cover bg-center bg-no-repeat"
+              className="relative h-[90vh] min-h-[700px] bg-cover bg-center bg-no-repeat"
               style={{ backgroundImage: `url(${slide.backgroundImage})` }}
             >
               {/* Gradient overlay */}

@@ -80,7 +80,7 @@ export default function ProductGrid() {
               ))}
             </div>
           </div>
-          <a href="#" className="hidden lg:inline text-sm font-medium underline underline-offset-4">View All</a>
+          <a href="#" className="hidden lg:inline font-medium">View All</a>
         </div>
 
         {pages.length > 0 ? (
@@ -109,15 +109,16 @@ export default function ProductGrid() {
                   <button onClick={() => swiperRef.current?.slidePrev()} className="h-9 w-9 grid place-content-center rounded-full border border-neutral-300 text-lg">‹</button>
                   <button onClick={() => swiperRef.current?.slideNext()} className="h-9 w-9 grid place-content-center rounded-full border border-neutral-300 text-lg">›</button>
                 </div>
-                <div className="text-sm text-neutral-600">
-                  <span>{pageIndex + 1}</span> / <span>{pages.length}</span>
-                </div>
-                <a href="#" className="text-sm font-medium underline underline-offset-4">View All</a>
-              </div>
-
-              <div className="mt-4 h-[2px] w-full bg-neutral-200 rounded-full">
+                <div className="h-[2px] w-[85%] bg-neutral-200 rounded-full">
                 <div className="h-full bg-neutral-900 rounded-full transition-all" style={{ width: `${progress}%` }} />
               </div>
+                {/* <div className="text-sm text-neutral-600">
+                  <span>{pageIndex + 1}</span> / <span>{pages.length}</span>
+                </div> */}
+                <a href="#" className=" font-medium">View All</a>
+              </div>
+
+
             </div>
           </div>
         ) : (
