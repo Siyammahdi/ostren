@@ -6,35 +6,28 @@
 @import "swiper/css/navigation";
 
 @font-face {
-  font-family: "GT America";
-  src: url("/fonts/GT-America-Standard-Light-Trial.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "GT America";
-  src: url("/fonts/GT-America-Standard-Regular-Trial.woff2") format("woff2");
+  font-family: "SamsungSharpSans";
+  src: url("/fonts/SamsungSharpSans-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "GT America";
-  src: url("/fonts/GT-America-Standard-Medium-Trial.woff2") format("woff2");
+  font-family: "SamsungSharpSans";
+  src: url("/fonts/SamsungSharpSans-Medium.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "GT America";
-  src: url("/fonts/GT-America-Standard-Bold-Trial.woff2") format("woff2");
+  font-family: "SamsungSharpSans";
+  src: url("/fonts/SamsungSharpSans-Bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 html, body {
-  font-family: "GT America", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: "SamsungSharpSans", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
