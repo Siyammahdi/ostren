@@ -10,7 +10,7 @@ const items = [
 
 export default function FeatureBar() {
   return (
-    <div className='px-8'>
+    <div className='px-8 max-w-[1600px] mx-auto'>
       <div className=" max-w-[1600px] mx-auto rounded-lg bg-emerald-300 ">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap items-center gap-x-8 gap-y-3 py-3 text-sm text-neutral-800">

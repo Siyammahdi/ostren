@@ -23,7 +23,7 @@ export default function Navbar() {
           <NavMegaDrawer open={menuOpen} active={hoverKey} onClose={() => setMenuOpen(false)} />
         </div>
       <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8 relative">
-        <div className="flex pt-1 items-center justify-between">
+        <div className="flex items-center justify-between h-[50px] my-auto">
           {/* Logo and Navigation */}
           <div className="flex items-center gap-14">
             <div className="flex items-center ">
