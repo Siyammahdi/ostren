@@ -13,7 +13,7 @@ export default function NavMegaDrawer({ open, active, onClose }) {
       { title: 'Steel Bottles', desc: 'Robust and odourless stainless.', img: '/single-product.png' },
       { title: 'Explorer Thermo Tumbler', desc: 'Built-in straw lid', img: '/single-product.png' },
     ],
-    Flavours: [
+    Wallet: [
       { title: 'Steel Bottles', desc: 'Robust and odourless stainless.', img: '/single-product.png' },
       { title: 'Explorer Thermo Tumbler', desc: 'Built-in straw lid', img: '/single-product.png' },
       { title: 'Lids & Caps', desc: 'Caps for every bottle', img: '/single-product.png' },
@@ -27,7 +27,7 @@ export default function NavMegaDrawer({ open, active, onClose }) {
       { title: 'All-Purpose Steel Bottles', desc: 'Wide opening, mix & match lids.', img: '/product.png' },
       { title: 'Steel Bottles', desc: 'Robust and odourless stainless.', img: '/single-product.png' },
     ],
-    'Bottles & More': [
+    Watch: [
       { title: 'Homeware & Accessories', desc: 'Carafes, cups, lids & more.', img: '/product.png' },
       { title: 'LUCY® Filter Carafe', desc: 'Purifies water, preserves minerals.', img: '/product.png' },
       { title: 'Steel Bottles', desc: 'Robust and odourless stainless.', img: '/single-product.png' },

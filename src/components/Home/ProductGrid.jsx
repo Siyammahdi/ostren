@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper/modules'
 import { FiInbox } from 'react-icons/fi'
 import ProductCard from '../ProductCard'
+import { IoArrowBack, IoArrowForward } from 'react-icons/io5'
 
 const categories = [
   { key: 'advent', label: 'Advent Calendar' },
@@ -106,8 +107,8 @@ export default function ProductGrid() {
             <div className="mt-8">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <button onClick={() => swiperRef.current?.slidePrev()} className="h-9 w-9 grid place-content-center rounded-full border border-neutral-300 text-lg">‹</button>
-                  <button onClick={() => swiperRef.current?.slideNext()} className="h-9 w-9 grid place-content-center rounded-full border border-neutral-300 text-lg">›</button>
+                  <button onClick={() => swiperRef.current?.slidePrev()} className="h-9 w-9 grid place-content-center rounded-full  bg-black text-lg text-white"><IoArrowBack /></button>
+                  <button onClick={() => swiperRef.current?.slideNext()} className="h-9 w-9 grid place-content-center rounded-full  bg-black text-lg text-white"><IoArrowForward /></button>
                 </div>
                 <div className="h-[2px] w-[85%] bg-neutral-200 rounded-full">
                 <div className="h-full bg-neutral-900 rounded-full transition-all" style={{ width: `${progress}%` }} />

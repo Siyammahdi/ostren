@@ -35,7 +35,7 @@ export default function BrandFeature() {
               style={{ top: h.top, left: h.left }}
             >
               <button
-                className="h-8 w-8 sm:h-9 sm:w-9 rounded-full bg-white/90 shadow-md ring-1 ring-black/5 grid place-content-center hover:bg-white"
+                className="h-8 w-8 sm:h-9 sm:w-9 rounded-full bg-white/50 backdrop-blur-lg shadow-md ring-1 ring-black/5 grid place-content-center hover:bg-white"
                 aria-label={h.title}
               >
                 <span className="h-1.5 w-1.5 rounded-full bg-neutral-900 block" />

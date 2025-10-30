@@ -11,8 +11,8 @@ export default function Navbar() {
 
   const navItems = [
     { label: 'Featured', href: '#' },
-    { label: 'Flavours', href: '#' },
-    { label: 'Bottles & More', href: '#' },
+    { label: 'Wallet', href: '#' },
+    { label: 'Watch', href: '#' },
     { label: 'Learn More', href: '#' }
   ]
 
