@@ -20,7 +20,7 @@ export default function ProductSlider() {
     <section className="py-12 sm:py-16 lg:py-20">
       <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-neutral-900">Your favourite flavours</h2>
+          <h2 className="text-[28px] sm:text-[34px] font-medium text-center tracking-tight text-neutral-900">Your favourite flavours</h2>
           <div className="hidden md:flex items-center gap-3">
             <button onClick={() => swiperRef.current?.slidePrev()} className="h-9 w-9 grid place-content-center rounded-full border border-neutral-300 text-lg">‹</button>
             <button onClick={() => swiperRef.current?.slideNext()} className="h-9 w-9 grid place-content-center rounded-full border border-neutral-300 text-lg">›</button>

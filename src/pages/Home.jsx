@@ -12,8 +12,7 @@ import Footer from '../components/Footer'
 export default function Home() {
   return (
     <>
-      <TopBar />
-      <Navbar />
+
       <Hero />
       <ProductGrid />
       <ProductSlider />

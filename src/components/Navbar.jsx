@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { FiSearch, FiShoppingCart, FiUser, FiMenu, FiX } from 'react-icons/fi'
+import { FiSearch, FiUser, FiMenu, FiX, FiShoppingBag } from 'react-icons/fi'
 import CartDrawer from './CartDrawer'
 import NavMegaDrawer from './NavMegaDrawer'
 
@@ -17,18 +17,22 @@ export default function Navbar() {
   ]
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/60 bg-white/80 border-b border-neutral-200" onMouseLeave={() => setMenuOpen(false)}>
+    <header className="sticky top-0 z-50 h-[50px] my-auto bg-white" onMouseLeave={() => setMenuOpen(false)}>
+              {/* Mega drawer (desktop) */}
+              <div className="hidden lg:block">
+          <NavMegaDrawer open={menuOpen} active={hoverKey} onClose={() => setMenuOpen(false)} />
+        </div>
       <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8 relative">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex pt-1 items-center justify-between">
           {/* Logo and Navigation */}
-          <div className="flex items-center gap-8">
+          <div className="flex items-center gap-14">
             <div className="flex items-center ">
               <div className='w-10 h-10'><img src="/ostren.png" alt="" /></div>
               <span className="font-semibold text-2xl tracking-tight text-neutral-900 -ml-1 ">stren</span>
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-8">
+            <nav className="hidden lg:flex items-center gap-14">
               {navItems.map((item) => (
                 <a 
                   key={item.label}
@@ -46,14 +50,14 @@ export default function Navbar() {
           <div className="flex items-center gap-4">
             {/* Desktop actions */}
             <div className="hidden md:flex items-center gap-3">
-              <button className="h-9 w-9 rounded-full border border-neutral-300 grid place-content-center hover:bg-neutral-50 transition-colors">
-                <FiUser className="h-4 w-4" />
+              <button className="h-9 w-9 grid place-content-center hover:bg-neutral-50 transition-colors">
+                <FiUser className="h-6 w-6" />
               </button>
-              <button className="h-9 w-9 rounded-full border border-neutral-300 grid place-content-center hover:bg-neutral-50 transition-colors">
-                <FiSearch className="h-4 w-4" />
+              <button className="h-9 w-9  grid place-content-center hover:bg-neutral-50 transition-colors">
+                <FiSearch className="h-6 w-6" />
               </button>
-              <button onClick={() => setCartOpen(true)} className="h-9 w-9 rounded-full border border-neutral-300 grid place-content-center hover:bg-neutral-50 transition-colors relative">
-                <FiShoppingCart className="h-4 w-4" />
+              <button onClick={() => setCartOpen(true)} className="h-9 w-9 grid place-content-center hover:bg-neutral-50 transition-colors relative">
+                <FiShoppingBag className="h-6 w-6" />
                 <span className="absolute -top-1 -right-1 h-4 w-4 rounded-full bg-emerald-500 text-xs text-white flex items-center justify-center">0</span>
               </button>
             </div>
@@ -69,10 +73,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mega drawer (desktop) */}
-        <div className="hidden lg:block">
-          <NavMegaDrawer open={menuOpen} active={hoverKey} onClose={() => setMenuOpen(false)} />
-        </div>
+
 
         {/* Mobile menu with transition */}
         <div aria-hidden={!open} className={`lg:hidden transition-all duration-300 ease-out ${open ? 'opacity-100 translate-y-0 max-h-[480px] mt-4' : 'opacity-0 -translate-y-2 max-h-0'} `}>
@@ -96,7 +97,7 @@ export default function Navbar() {
                 <FiSearch className="h-4 w-4" />
               </button>
               <button onClick={() => setCartOpen(true)} className="h-10 w-10 rounded-full border border-neutral-300 grid place-content-center hover:bg-neutral-50 relative">
-                <FiShoppingCart className="h-4 w-4" />
+                <FiShoppingBag className="h-4 w-4" />
                 <span className="absolute -top-1 -right-1 h-4 w-4 rounded-full bg-emerald-500 text-xs text-white flex items-center justify-center">0</span>
               </button>
             </div>

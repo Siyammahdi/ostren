@@ -33,10 +33,10 @@ export default function NavMegaDrawer({ open, active, onClose }) {
   const items = groups[active] || []
 
   return (
-    <div className={`absolute left-0 right-0 top-full z-40 ${open ? '' : 'pointer-events-none'}`} onMouseLeave={onClose}>
-      <div className={`px-4 sm:px-6 lg:px-8 transition-all duration-200 ${open ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2'}`}>
-        <div className="overflow-hidden rounded-b-2xl border-x border-b border-neutral-200 bg-white shadow-xl">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+    <div className={`absolute left-0 right-0 top-full z-40 ${open ? '' : 'pointer-events-none'}`} onMouseLeave={onClose} style={{height: 'auto', padding:0, margin:0}}>
+      <div className={`transition-all duration-200 w-full ${open ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2'}`} style={{height: 'auto', padding:0, margin:0}}>
+        <div className="overflow-x-auto overflow-y-visible border-x-0 border-b border-neutral-200 bg-white shadow-lg w-full" style={{height:'auto', padding:0, margin:0}}>
+          <div className="max-w-[1600px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-6">
             {items.map((it, idx) => (
               <a key={idx} href="#" className="flex items-center gap-4 rounded-xl p-3 hover:bg-neutral-50">
                 <div className="h-16 w-16 rounded-lg bg-neutral-100 overflow-hidden flex items-center justify-center">

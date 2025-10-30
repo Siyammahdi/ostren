@@ -32,7 +32,7 @@ export default function Footer() {
           <div>
             <h4 className="font-medium text-neutral-900">Newsletter</h4>
             <p className="mt-3 text-sm text-neutral-600">Get early access to drops and exclusive offers.</p>
-            <form className="mt-4 flex-wrap gap-2">
+            <form className="mt-4 flex flex-wrap gap-2">
               <input type="email" placeholder="you@example.com" className="h-10 flex-1 rounded-full border mb-1 border-neutral-300 px-4 focus:outline-none focus:ring-2 focus:ring-neutral-900" />
               <button className="h-10 rounded-full bg-neutral-900 px-5 text-white">Join</button>
             </form>

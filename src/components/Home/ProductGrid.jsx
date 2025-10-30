@@ -67,13 +67,13 @@ export default function ProductGrid() {
       <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8">
         <div className="flex items-start justify-between gap-4">
           <div>
-            <h2 className="text-[32px] sm:text-[38px] leading-none font-extrabold tracking-tight text-neutral-900 mb-10">Discover our products</h2>
+            <h2 className="text-[32px] sm:text-[38px] leading-none font-extrabold tracking-tight text-neutral-900 mb-2">Discover our products</h2>
             <div className="mt-4 flex flex-wrap items-center gap-3">
               {categories.map((c) => (
                 <button
                   key={c.key}
                   onClick={() => setActive(c.key)}
-                  className={`rounded-full border px-4 py-2 text-sm ${active === c.key ? 'bg-neutral-900 text-white border-neutral-900' : 'border-neutral-300 text-neutral-900 hover:bg-neutral-50'}`}
+                  className={`rounded-full px-8 py-1 ${active === c.key ? 'bg-neutral-900 text-white' : 'bg-neutral-200 text-neutral-900 hover:bg-neutral-50'}`}
                 >
                   {c.label}
                 </button>

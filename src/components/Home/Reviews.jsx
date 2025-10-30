@@ -66,7 +66,7 @@ export default function Reviews() {
             >
               {REVIEWS.map((r, i) => (
                 <SwiperSlide key={i} className="h-auto">
-                  <article className="rounded-xl bg-neutral-50 p-5 ring-1 ring-neutral-200 m-1">
+                  <article className="rounded-xl bg-neutral-100 p-5 m-1">
                     <header className="flex items-start justify-between">
                       <div className="text-sm font-semibold text-neutral-900">{r.name}{r.location ? `, ${r.location}` : ''}</div>
                     </header>
