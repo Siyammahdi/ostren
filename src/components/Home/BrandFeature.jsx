@@ -42,9 +42,14 @@ export default function BrandFeature() {
               </button>
 
               {/* Tooltip card */}
-              <div className="pointer-events-none absolute left-1/2 top-10 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
-                <div className="w-[260px] sm:w-[280px] rounded-xl bg-white p-4 shadow-xl ring-1 ring-black/5">
-                  <div className="flex items-center justify-between">
+              <div className="pointer-events-none absolute left-1/2 top-10 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity ">
+ 
+                <div className="w-[260px] sm:w-[280px] flex gap-2 h-32 rounded-xl bg-white p-4 shadow-xl ring-1 ring-black/5">
+                <div className="h-40 w-20">
+                <img className='rounded-xl' src="/product.png" alt="" />
+              </div>
+                <div>
+                <div className="flex items-center justify-between">
                     <div className="text-[13px] font-semibold">{h.title}</div>
                     <button className="text-neutral-400 hover:text-neutral-600">
                       <FiX />
@@ -54,6 +59,7 @@ export default function BrandFeature() {
                   <button className="mt-3 inline-flex h-9 w-full items-center justify-center rounded-full bg-emerald-600 text-white text-sm font-semibold hover:bg-emerald-700">
                     + ADD TO CART
                   </button>
+                </div>
                 </div>
               </div>
             </div>
