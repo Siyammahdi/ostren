@@ -27,8 +27,7 @@ export default function Navbar() {
           {/* Logo and Navigation */}
           <div className="flex items-center gap-14">
             <div className="flex items-center ">
-              <div className='w-10 h-10'><img src="/ostren.png" alt="" /></div>
-              <span className="font-semibold text-2xl tracking-tight text-neutral-900 -ml-1 ">stren</span>
+              <div className='w-22'><img src="/ostren-icon-black.svg" alt="" /></div>
             </div>
 
             {/* Desktop Navigation */}

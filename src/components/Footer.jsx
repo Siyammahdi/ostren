@@ -5,8 +5,7 @@ export default function Footer() {
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <div className="flex items-center">
-            <div className='w-10 h-10'><img src="/ostren.png" alt="" /></div>
-              <span className="font-semibold text-2xl tracking-tight -ml-1">stren</span>
+            <div className='w-22'><img src="/ostren-icon-black.svg" alt="" /></div>
             </div>
             <p className="mt-3 text-sm text-neutral-600 max-w-xs">Hydration made simple. Clean ingredients, bold flavour, premium feel.</p>
           </div>

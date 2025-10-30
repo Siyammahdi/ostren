@@ -19,6 +19,12 @@ const IMAGES = [
     price: "€12,90",
     dialogImg: "/product.png",
   },
+  {
+    src: "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1000&q=80",
+    title: "ICE TEA RASPBERRY",
+    price: "€8,99",
+    dialogImg: "/single-product.png",
+  },
 ];
 
 function useDragScroll(ref) {
@@ -89,7 +95,7 @@ export default function ShopGallerySlider() {
           {IMAGES.map((img, idx) => (
             <div
               key={idx}
-              className="relative shrink-0 flex items-center group"
+              className="relative shrink-0 flex items-end group"
               style={{ height: 320, width: 'auto', minWidth: 180 }}
             >
               <img

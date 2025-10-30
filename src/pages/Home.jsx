@@ -1,5 +1,3 @@
-import TopBar from '../components/Home/TopBar'
-import Navbar from '../components/Navbar'
 import Hero from '../components/Home/Hero'
 import ProductSlider from '../components/Home/ProductSlider'
 import ProductGrid from '../components/Home/ProductGrid'
@@ -20,7 +18,6 @@ export default function Home() {
       <BrandFeature />
       <Reviews />
       <ChallengeBanner />
-      <Footer />
     </>
   )
 }

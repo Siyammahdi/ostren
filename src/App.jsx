@@ -1,4 +1,5 @@
 import './App.css'
+import Footer from './components/Footer'
 import TopBar from './components/Home/TopBar'
 import Navbar from './components/Navbar'
 import SmoothScroll from './components/SmoothScroll'
@@ -18,6 +19,7 @@ function App() {
         <Route path="/shop" element={<Shop />} />
       </Routes>
     </Router>
+    <Footer />
 </div>
 
   )
