@@ -51,7 +51,7 @@ export default function CartDrawer({ open, onClose }) {
               <span className="font-semibold">€19,80</span>
             </div>
             <button className="mt-4 inline-flex w-full items-center justify-center rounded-full bg-neutral-900 px-4 py-3 text-sm font-semibold text-white hover:bg-neutral-800">Checkout</button>
-            <button className="mt-2 inline-flex w-full items-center justify-center rounded-full bg-neutral-900 px-4 py-3 text-sm font-semibold text-white hover:bg-neutral-800">View Full Cart</button>
+            <button className="border-2 border-neutral-800 mt-2 inline-flex w-full items-center justify-center rounded-full bg-transparent px-4 py-2 text-sm font-semibold text-black hover:text-white hover:bg-neutral-800">View Full Cart</button>
           </div>
         </div>
       </aside>
