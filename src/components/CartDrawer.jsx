@@ -5,7 +5,7 @@ export default function CartDrawer({ open, onClose }) {
   if (typeof document === 'undefined') return null
 
   return createPortal(
-    <div className={`fixed inset-0 z-[1000] ${open ? '' : 'pointer-events-none'}`} aria-hidden={!open}>
+    <div className={`fixed inset-0 z-1000 ${open ? '' : 'pointer-events-none'}`} aria-hidden={!open}>
       {/* Overlay */}
       <div
         className={`absolute inset-0 bg-black/60 backdrop-blur-lg transition-opacity duration-200 ${open ? 'opacity-100' : 'opacity-0'}`}

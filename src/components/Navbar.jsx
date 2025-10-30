@@ -57,7 +57,7 @@ export default function Navbar() {
               </button>
               <button onClick={() => setCartOpen(true)} className="h-9 w-9 grid place-content-center hover:bg-neutral-50 transition-colors relative">
                 <FiShoppingBag className="h-6 w-6" />
-                <span className="absolute -top-1 -right-1 h-4 w-4 rounded-full bg-emerald-500 text-xs text-white flex items-center justify-center">0</span>
+                <span className="absolute -top-1 -right-1 h-4 w-4 rounded-full bg-black text-xs text-white flex items-center justify-center">0</span>
               </button>
             </div>
 

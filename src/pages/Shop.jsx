@@ -3,6 +3,7 @@ import ShopBanner from "../components/Shop/ShopBanner"
 import ShopCategoryTabs from "../components/Shop/ShopCategoryTabs"
 import ShopProducts from "../components/Shop/ShopProducts"
 import ShopGallerySlider from "../components/Shop/ShopGallerySlider"
+import ShopHowItWorks from "../components/Shop/ShopHowItWorks"
 
 const ALL_PRODUCTS = [
   { title: "TURBO BOOST Twin Pack", price: "€17,99", oldPrice: "€19,98", tag: "LIMITED TIME ONLY", discount: "-10%", image: "/product.png", info: "24 Servings - Natural Caffeine and Zero Sugar", category: "Microdrink" },
@@ -10,7 +11,6 @@ const ALL_PRODUCTS = [
   { title: "Ultimate Energy Booster Set", price: "€34,90", oldPrice: "€39,98", discount: "-13%", image: "/product.png", info: "38 Servings - Natural Caffeine and Zero Sugar", category: "Microenergy" },
   { title: "Turbo Workout Hydration Set", price: "€25,90", oldPrice: "€29,97", discount: "-14%", image: "/product.png", info: "36 Servings - Electrolytes, Natural Caffeine, Zero Sugar", category: "Microsytle" },
   { title: "Limited Edition Frosted Glass Set", price: "€42,90", oldPrice: "€49,98", tag: "LIMITED EDITION", discount: "-14%", image: "/product.png", info: "24 Servings - Zero Sugar - Borosilicate Glass Bottle", category: "Glass Bottles" },
-  // Add more items and more categories for demo
 ]
 
 const CATEGORY_LIST = [
@@ -40,6 +40,7 @@ export default function ShopPage() {
       <ShopCategoryTabs selected={selectedCategory} onSelect={handleTab} />
       <ShopGallerySlider />
       <ShopProducts products={display} page={page} setPage={setPage} pageSize={pageSize} total={filtered.length} />
+      <ShopHowItWorks />
     </>
   )
 }

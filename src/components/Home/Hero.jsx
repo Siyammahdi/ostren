@@ -33,8 +33,8 @@ const slides = [
 
 export default function Hero() {
   return (
-    <section className="relative py-6 lg:py-2 px-4 md:px-8 ">
-      <div className="mx-auto max-w-[1600px]">
+    <section className="relative py-6 lg:py-2 px-4">
+      <div className="mx-auto max-w-[1600px] px-8">
         <Swiper
           modules={[Autoplay, Pagination, Navigation]}
           spaceBetween={0}

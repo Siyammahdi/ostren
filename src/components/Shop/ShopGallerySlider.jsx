@@ -139,7 +139,7 @@ export default function ShopGallerySlider() {
             </div>
           ))}
         </div>
-        <div className="flex justify-center gap-4 mt-6">
+        <div className="max-w-[1600px] mx-auto flex justify-end items-center px-10 gap-4 mt-6">
           <button
             aria-label="Previous"
             className="rounded-full bg-white border border-neutral-200 w-12 h-12 shadow hover:bg-neutral-100 flex items-center justify-center"
