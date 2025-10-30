@@ -27,7 +27,7 @@ export default function Navbar() {
           {/* Logo and Navigation */}
           <div className="flex items-center gap-14">
             <div className="flex items-center ">
-              <div className='w-22'><img src="/ostren-icon-black.svg" alt="" /></div>
+              <a className="block w-22" href="/"><img src="/ostren-icon-black.svg" alt="" /></a>
             </div>
 
             {/* Desktop Navigation */}

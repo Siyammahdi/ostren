@@ -10,7 +10,7 @@ export default function ChallengeBanner() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/20 to-black/80" />
 
-          <div className="absolute inset-0 flex items-center">
+          <div className="absolute inset-0 flex items-end py-12">
             <div className="px-6 sm:px-10 lg:px-14 max-w-2xl">
               <h3 className="text-[28px] sm:text-[42px] leading-tight font-extrabold tracking-tight text-white">
                 Finally, you want to make you
