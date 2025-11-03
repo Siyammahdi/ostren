@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 import SmoothScroll from './components/SmoothScroll'
 import Home from './pages/Home'
 import Shop from './pages/Shop'
+import ProductDetail from './pages/ProductDetail'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Shop />} />
+        <Route path="/product/:id" element={<ProductDetail />} />
       </Routes>
     </Router>
     <Footer />

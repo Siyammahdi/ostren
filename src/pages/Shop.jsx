@@ -6,11 +6,11 @@ import ShopGallerySlider from "../components/Shop/ShopGallerySlider"
 import ShopHowItWorks from "../components/Shop/ShopHowItWorks"
 
 const ALL_PRODUCTS = [
-  { title: "TURBO BOOST Twin Pack", price: "€17,99", oldPrice: "€19,98", tag: "LIMITED TIME ONLY", discount: "-10%", image: "/product.png", info: "24 Servings - Natural Caffeine and Zero Sugar", category: "Microdrink" },
-  { title: "Neon Energy Bottle Set", price: "€53,99", oldPrice: "€62,88", discount: "-14%", image: "/product.png", info: "48 Servings - No Sugar - Stainless Steel Bottle", category: "Steel Bottles" },
-  { title: "Ultimate Energy Booster Set", price: "€34,90", oldPrice: "€39,98", discount: "-13%", image: "/product.png", info: "38 Servings - Natural Caffeine and Zero Sugar", category: "Microenergy" },
-  { title: "Turbo Workout Hydration Set", price: "€25,90", oldPrice: "€29,97", discount: "-14%", image: "/product.png", info: "36 Servings - Electrolytes, Natural Caffeine, Zero Sugar", category: "Microsytle" },
-  { title: "Limited Edition Frosted Glass Set", price: "€42,90", oldPrice: "€49,98", tag: "LIMITED EDITION", discount: "-14%", image: "/product.png", info: "24 Servings - Zero Sugar - Borosilicate Glass Bottle", category: "Glass Bottles" },
+  { id: "turbo-boost-twin-pack", title: "TURBO BOOST Twin Pack", price: "€17,99", oldPrice: "€19,98", tag: "LIMITED TIME ONLY", discount: "-10%", image: "/product.png", info: "24 Servings - Natural Caffeine and Zero Sugar", category: "Microdrink" },
+  { id: "neon-energy-bottle-set", title: "Neon Energy Bottle Set", price: "€53,99", oldPrice: "€62,88", discount: "-14%", image: "/product.png", info: "48 Servings - No Sugar - Stainless Steel Bottle", category: "Steel Bottles" },
+  { id: "ultimate-energy-booster-set", title: "Ultimate Energy Booster Set", price: "€34,90", oldPrice: "€39,98", discount: "-13%", image: "/product.png", info: "38 Servings - Natural Caffeine and Zero Sugar", category: "Microenergy" },
+  { id: "turbo-workout-hydration-set", title: "Turbo Workout Hydration Set", price: "€25,90", oldPrice: "€29,97", discount: "-14%", image: "/product.png", info: "36 Servings - Electrolytes, Natural Caffeine, Zero Sugar", category: "Microsytle" },
+  { id: "limited-edition-frosted-glass-set", title: "Limited Edition Frosted Glass Set", price: "€42,90", oldPrice: "€49,98", tag: "LIMITED EDITION", discount: "-14%", image: "/product.png", info: "24 Servings - Zero Sugar - Borosilicate Glass Bottle", category: "Glass Bottles" },
 ]
 
 const CATEGORY_LIST = [

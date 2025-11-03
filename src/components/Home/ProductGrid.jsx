@@ -12,33 +12,36 @@ const categories = [
   { key: 'sale', label: 'SALE %' },
 ]
 
+// Helper function to create product slug from title
+const createSlug = (title) => title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
+
 const allProducts = {
   advent: [
-    { title: 'Fizzy Refreshment 4+1 Set', price: '€35,96', oldPrice: '€44,95', tag: 'LIMITED TIME ONLY', image: 'https://images.unsplash.com/photo-1619551734318-0602c65f7d8f?w=800&h=1066&fit=crop&crop=center', rating: 5.0, discount: 20 },
-    { title: 'Fresh & Fizzy Set', price: '€23,90', oldPrice: '€26,97', tag: 'LIMITED TIME ONLY', image: 'https://images.unsplash.com/photo-1622484211290-cb5db1f2fd51?w=800&h=1066&fit=crop&crop=center', rating: 4.5, discount: 11 },
-    { title: 'ICE TEA PEACH', price: '€8,99', tag: 'BESTSELLER', image: 'https://images.unsplash.com/photo-1541976076758-347942db1970?w=800&h=1066&fit=crop&crop=center', rating: 4.6 },
-    { title: 'Clear Glass', price: '€22,90', oldPrice: '€26,90', image: 'https://images.unsplash.com/photo-1526404800610-2ae3e34a7b88?w=800&h=1066&fit=crop&crop=center', rating: 4.9, discount: 15 },
-    { title: 'Citrus Zest', price: '€9,90', image: 'https://images.unsplash.com/photo-1502741338009-cac2772e18bc?w=800&h=1066&fit=crop&crop=center', rating: 4.3 },
-    { title: 'Berry Boost', price: '€9,90', tag: 'Bestseller', image: 'https://images.unsplash.com/photo-1488900128323-21503983a07e?w=800&h=1066&fit=crop&crop=center', rating: 4.8 },
-    { title: 'Mango Boost', price: '€9,90', image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&h=1066&fit=crop&crop=center', rating: 4.7 },
-    { title: 'Cherry Boost', price: '€9,90', image: 'https://images.unsplash.com/photo-1543353071-10c8ba85a904?w=800&h=1066&fit=crop&crop=center', rating: 4.4 },
-    { title: 'Fizzy Refreshment 4+1 Set', price: '€35,96', oldPrice: '€44,95', tag: 'LIMITED TIME ONLY', image: 'https://images.unsplash.com/photo-1619551734318-0602c65f7d8f?w=800&h=1066&fit=crop&crop=center', rating: 5.0, discount: 20 },
-    { title: 'Fresh & Fizzy Set', price: '€23,90', oldPrice: '€26,97', tag: 'LIMITED TIME ONLY', image: 'https://images.unsplash.com/photo-1622484211290-cb5db1f2fd51?w=800&h=1066&fit=crop&crop=center', rating: 4.5, discount: 11 },
-    { title: 'ICE TEA PEACH', price: '€8,99', tag: 'BESTSELLER', image: 'https://images.unsplash.com/photo-1541976076758-347942db1970?w=800&h=1066&fit=crop&crop=center', rating: 4.6 },
-    { title: 'Clear Glass', price: '€22,90', oldPrice: '€26,90', image: 'https://images.unsplash.com/photo-1526404800610-2ae3e34a7b88?w=800&h=1066&fit=crop&crop=center', rating: 4.9, discount: 15 },
-    { title: 'Citrus Zest', price: '€9,90', image: 'https://images.unsplash.com/photo-1502741338009-cac2772e18bc?w=800&h=1066&fit=crop&crop=center', rating: 4.3 },
-    { title: 'Berry Boost', price: '€9,90', tag: 'Bestseller', image: 'https://images.unsplash.com/photo-1488900128323-21503983a07e?w=800&h=1066&fit=crop&crop=center', rating: 4.8 },
-    { title: 'Mango Boost', price: '€9,90', image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&h=1066&fit=crop&crop=center', rating: 4.7 },
+    { id: 'fizzy-refreshment-4-1-set', title: 'Fizzy Refreshment 4+1 Set', price: '€35,96', oldPrice: '€44,95', tag: 'LIMITED TIME ONLY', image: 'https://images.unsplash.com/photo-1619551734318-0602c65f7d8f?w=800&h=1066&fit=crop&crop=center', rating: 5.0, discount: 20 },
+    { id: 'fresh-fizzy-set', title: 'Fresh & Fizzy Set', price: '€23,90', oldPrice: '€26,97', tag: 'LIMITED TIME ONLY', image: 'https://images.unsplash.com/photo-1622484211290-cb5db1f2fd51?w=800&h=1066&fit=crop&crop=center', rating: 4.5, discount: 11 },
+    { id: 'ice-tea-peach', title: 'ICE TEA PEACH', price: '€8,99', tag: 'BESTSELLER', image: 'https://images.unsplash.com/photo-1541976076758-347942db1970?w=800&h=1066&fit=crop&crop=center', rating: 4.6 },
+    { id: 'clear-glass', title: 'Clear Glass', price: '€22,90', oldPrice: '€26,90', image: 'https://images.unsplash.com/photo-1526404800610-2ae3e34a7b88?w=800&h=1066&fit=crop&crop=center', rating: 4.9, discount: 15 },
+    { id: 'citrus-zest', title: 'Citrus Zest', price: '€9,90', image: 'https://images.unsplash.com/photo-1502741338009-cac2772e18bc?w=800&h=1066&fit=crop&crop=center', rating: 4.3 },
+    { id: 'berry-boost', title: 'Berry Boost', price: '€9,90', tag: 'Bestseller', image: 'https://images.unsplash.com/photo-1488900128323-21503983a07e?w=800&h=1066&fit=crop&crop=center', rating: 4.8 },
+    { id: 'mango-boost', title: 'Mango Boost', price: '€9,90', image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&h=1066&fit=crop&crop=center', rating: 4.7 },
+    { id: 'cherry-boost', title: 'Cherry Boost', price: '€9,90', image: 'https://images.unsplash.com/photo-1543353071-10c8ba85a904?w=800&h=1066&fit=crop&crop=center', rating: 4.4 },
+    { id: 'fizzy-refreshment-4-1-set-2', title: 'Fizzy Refreshment 4+1 Set', price: '€35,96', oldPrice: '€44,95', tag: 'LIMITED TIME ONLY', image: 'https://images.unsplash.com/photo-1619551734318-0602c65f7d8f?w=800&h=1066&fit=crop&crop=center', rating: 5.0, discount: 20 },
+    { id: 'fresh-fizzy-set-2', title: 'Fresh & Fizzy Set', price: '€23,90', oldPrice: '€26,97', tag: 'LIMITED TIME ONLY', image: 'https://images.unsplash.com/photo-1622484211290-cb5db1f2fd51?w=800&h=1066&fit=crop&crop=center', rating: 4.5, discount: 11 },
+    { id: 'ice-tea-peach-2', title: 'ICE TEA PEACH', price: '€8,99', tag: 'BESTSELLER', image: 'https://images.unsplash.com/photo-1541976076758-347942db1970?w=800&h=1066&fit=crop&crop=center', rating: 4.6 },
+    { id: 'clear-glass-2', title: 'Clear Glass', price: '€22,90', oldPrice: '€26,90', image: 'https://images.unsplash.com/photo-1526404800610-2ae3e34a7b88?w=800&h=1066&fit=crop&crop=center', rating: 4.9, discount: 15 },
+    { id: 'citrus-zest-2', title: 'Citrus Zest', price: '€9,90', image: 'https://images.unsplash.com/photo-1502741338009-cac2772e18bc?w=800&h=1066&fit=crop&crop=center', rating: 4.3 },
+    { id: 'berry-boost-2', title: 'Berry Boost', price: '€9,90', tag: 'Bestseller', image: 'https://images.unsplash.com/photo-1488900128323-21503983a07e?w=800&h=1066&fit=crop&crop=center', rating: 4.8 },
+    { id: 'mango-boost-2', title: 'Mango Boost', price: '€9,90', image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&h=1066&fit=crop&crop=center', rating: 4.7 },
   ],
   turbo: [
-    { title: 'Turbo Boost Berry', price: '€11,90', tag: 'NEW', image: 'https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=800&h=1066&fit=crop&crop=center', rating: 4.9 },
-    { title: 'Turbo Boost Mango', price: '€11,90', tag: 'NEW', image: 'https://images.unsplash.com/photo-1502741126161-b048400d0e2c?w=800&h=1066&fit=crop&crop=center', rating: 4.8 },
+    { id: 'turbo-boost-berry', title: 'Turbo Boost Berry', price: '€11,90', tag: 'NEW', image: 'https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=800&h=1066&fit=crop&crop=center', rating: 4.9 },
+    { id: 'turbo-boost-mango', title: 'Turbo Boost Mango', price: '€11,90', tag: 'NEW', image: 'https://images.unsplash.com/photo-1502741126161-b048400d0e2c?w=800&h=1066&fit=crop&crop=center', rating: 4.8 },
   ],
   bestsellers: [
-    { title: 'ICE TEA PEACH', price: '€8,99', tag: 'BESTSELLER', image: 'https://images.unsplash.com/photo-1541976076758-347942db1970?w=800&h=1066&fit=crop&crop=center', rating: 4.6 },
-    { title: 'Berry Boost', price: '€9,90', tag: 'Bestseller', image: 'https://images.unsplash.com/photo-1488900128323-21503983a07e?w=800&h=1066&fit=crop&crop=center', rating: 4.8 },
-    { title: 'Mango Boost', price: '€9,90', image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&h=1066&fit=crop&crop=center', rating: 4.7 },
-    { title: 'Clear Glass', price: '€22,90', oldPrice: '€26,90', image: 'https://images.unsplash.com/photo-1526404800610-2ae3e34a7b88?w=800&h=1066&fit=crop&crop=center', rating: 4.9, discount: 15 },
+    { id: 'ice-tea-peach-bestseller', title: 'ICE TEA PEACH', price: '€8,99', tag: 'BESTSELLER', image: 'https://images.unsplash.com/photo-1541976076758-347942db1970?w=800&h=1066&fit=crop&crop=center', rating: 4.6 },
+    { id: 'berry-boost-bestseller', title: 'Berry Boost', price: '€9,90', tag: 'Bestseller', image: 'https://images.unsplash.com/photo-1488900128323-21503983a07e?w=800&h=1066&fit=crop&crop=center', rating: 4.8 },
+    { id: 'mango-boost-bestseller', title: 'Mango Boost', price: '€9,90', image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&h=1066&fit=crop&crop=center', rating: 4.7 },
+    { id: 'clear-glass-bestseller', title: 'Clear Glass', price: '€22,90', oldPrice: '€26,90', image: 'https://images.unsplash.com/photo-1526404800610-2ae3e34a7b88?w=800&h=1066&fit=crop&crop=center', rating: 4.9, discount: 15 },
   ],
   sale: [],
 }
@@ -96,8 +99,8 @@ export default function ProductGrid() {
               {pages.map((page, idx) => (
                 <SwiperSlide key={idx}>
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {page.map((p) => (
-                      <ProductCard key={p.title} {...p} />
+                    {page.map((p, idx) => (
+                      <ProductCard key={p.id || `${p.title}-${idx}`} {...p} id={p.id || createSlug(p.title)} />
                     ))}
                   </div>
                 </SwiperSlide>

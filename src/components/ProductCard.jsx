@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { FiStar, FiShoppingBag } from 'react-icons/fi'
 
 export default function ProductCard({
@@ -8,17 +9,23 @@ export default function ProductCard({
   image,
   rating = 0,
   discount,
+  id,
+  slug,
 }) {
+  const productLink = slug || id || '#'
+  
   return (
     <div className="group rounded-2xl bg-white overflow-hidden h-full flex flex-col">
       <div className="relative">
-        <div className="w-full overflow-hidden rounded-2xl aspect-[3/4] sm:aspect-[3/4]">
-          {image ? (
-            <img src="/product.png" alt={title} className="h-full w-full object-cover" />
-          ) : (
-            <div className="h-full w-full bg-neutral-100" />
-          )}
-        </div>
+        <Link to={`/product/${productLink}`} className="block">
+          <div className="w-full overflow-hidden rounded-2xl aspect-[3/4] sm:aspect-[3/4]">
+            {image ? (
+              <img src="/product.png" alt={title} className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" />
+            ) : (
+              <div className="h-full w-full bg-neutral-100" />
+            )}
+          </div>
+        </Link>
 
         {/* Discount */}
         {discount && (
@@ -53,7 +60,9 @@ export default function ProductCard({
 
       <div className="px-2 sm:px-3 pt-3 sm:pt-4 flex-1">
         {/* Title */}
-        <h3 className="mt-1 text-sm sm:text-base font-medium text-neutral-900 line-clamp-2">{title}</h3>
+        <Link to={`/product/${productLink}`} className="block">
+          <h3 className="mt-1 text-sm sm:text-base font-medium text-neutral-900 line-clamp-2 hover:text-neutral-600 transition-colors">{title}</h3>
+        </Link>
 
         {/* Price */}
         <div className=" flex items-center gap-2">

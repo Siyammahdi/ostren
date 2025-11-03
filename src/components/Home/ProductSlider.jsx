@@ -1,15 +1,19 @@
 import { useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper/modules'
 
+// Helper function to create product slug from title
+const createSlug = (title) => title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
+
 const items = [
-  { title: 'Pomegranate Mint', image: '/product.png' },
-  { title: 'BLACKBERRY', image: '/product.png' },
-  { title: 'GRAPEFRUIT', image: '/product.png' },
-  { title: 'ICE TEA PEACH', image: '/product.png' },
-  { title: 'BERRY BOOST', image: '/product.png' },
-  { title: 'ORANGE', image: '/product.png' },
-  { title: 'LEMON LIME', image: '/product.png' },
+  { title: 'Pomegranate Mint', image: '/product.png', id: 'pomegranate-mint' },
+  { title: 'BLACKBERRY', image: '/product.png', id: 'blackberry' },
+  { title: 'GRAPEFRUIT', image: '/product.png', id: 'grapefruit' },
+  { title: 'ICE TEA PEACH', image: '/product.png', id: 'ice-tea-peach' },
+  { title: 'BERRY BOOST', image: '/product.png', id: 'berry-boost' },
+  { title: 'ORANGE', image: '/product.png', id: 'orange' },
+  { title: 'LEMON LIME', image: '/product.png', id: 'lemon-lime' },
 ]
 
 export default function ProductSlider() {
@@ -51,14 +55,14 @@ export default function ProductSlider() {
           >
             {items.map((item, i) => (
               <SwiperSlide key={i}>
-                <div className="flex flex-col items-center">
-                  <div className="h-48 sm:h-56 lg:h-72 w-full max-w-[280px] mx-auto overflow-hidden rounded-xl bg-white">
+                <Link to={`/product/${item.id || createSlug(item.title)}`} className="flex flex-col items-center group">
+                  <div className="h-48 sm:h-56 lg:h-72 w-full max-w-[280px] mx-auto overflow-hidden rounded-xl bg-white transition-transform duration-300 group-hover:scale-105">
                     <img src="/single-product.png" alt={item.title} className="h-full w-full object-contain" />
                   </div>
-                  <div className="text-sm font-medium tracking-wide text-neutral-900">
+                  <div className="text-sm font-medium tracking-wide text-neutral-900 mt-2 group-hover:text-neutral-600 transition-colors">
                     {item.title}
                   </div>
-                </div>
+                </Link>
               </SwiperSlide>
             ))}
           </Swiper>
