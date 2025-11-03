@@ -11,9 +11,9 @@ export default function ProductAccordion({ title, content, isOpen, onToggle }) {
           {title}
         </span>
         {isOpen ? (
-          <FiMinus className="h-5 w-5 text-neutral-600 flex-shrink-0" />
+          <FiMinus className="h-5 w-5 text-neutral-600 shrink-0" />
         ) : (
-          <FiPlus className="h-5 w-5 text-neutral-600 flex-shrink-0" />
+          <FiPlus className="h-5 w-5 text-neutral-600 shrink-0" />
         )}
       </button>
       

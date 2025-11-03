@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { FiSearch, FiUser, FiMenu, FiX, FiShoppingBag } from 'react-icons/fi'
 import CartDrawer from './CartDrawer'
 import NavMegaDrawer from './NavMegaDrawer'
@@ -49,9 +50,9 @@ export default function Navbar() {
           <div className="flex items-center gap-4">
             {/* Desktop actions */}
             <div className="hidden md:flex items-center gap-3">
-              <button className="h-9 w-9 grid place-content-center hover:bg-neutral-50 transition-colors">
+              <Link to="/signin" className="h-9 w-9 grid place-content-center hover:bg-neutral-50 transition-colors">
                 <FiUser className="h-6 w-6" />
-              </button>
+              </Link>
               <button className="h-9 w-9  grid place-content-center hover:bg-neutral-50 transition-colors">
                 <FiSearch className="h-6 w-6" />
               </button>
@@ -75,7 +76,7 @@ export default function Navbar() {
 
 
         {/* Mobile menu with transition */}
-        <div aria-hidden={!open} className={`lg:hidden transition-all duration-300 ease-out ${open ? 'opacity-100 translate-y-0 max-h-[480px] mt-4' : 'opacity-0 -translate-y-2 max-h-0'} `}>
+        <div aria-hidden={!open} className={`lg:hidden bg-white transition-all duration-300 ease-out ${open ? 'opacity-100 translate-y-0 max-h-[480px] ' : 'opacity-0 -translate-y-2 max-h-0'} `}>
           <div className={`overflow-hidden border-t border-neutral-200 ${open ? 'pt-4 pb-4' : 'pt-0 pb-0'}`}>
             <nav className="grid gap-2 text-sm text-neutral-700">
               {navItems.map((item) => (
@@ -89,9 +90,9 @@ export default function Navbar() {
               ))}
             </nav>
             <div className="mt-4 flex items-center gap-3">
-              <button className="h-10 w-10 rounded-full border border-neutral-300 grid place-content-center hover:bg-neutral-50">
+              <Link to="/signin" className="h-10 w-10 rounded-full border border-neutral-300 grid place-content-center hover:bg-neutral-50">
                 <FiUser className="h-4 w-4" />
-              </button>
+              </Link>
               <button className="h-10 w-10 rounded-full border border-neutral-300 grid place-content-center hover:bg-neutral-50">
                 <FiSearch className="h-4 w-4" />
               </button>

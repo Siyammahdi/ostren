@@ -18,7 +18,7 @@ export default function ProductCard({
     <div className="group rounded-2xl bg-white overflow-hidden h-full flex flex-col">
       <div className="relative">
         <Link to={`/product/${productLink}`} className="block">
-          <div className="w-full overflow-hidden rounded-2xl aspect-[3/4] sm:aspect-[3/4]">
+          <div className="w-full overflow-hidden rounded-2xl aspect-3/4 sm:aspect-3/4">
             {image ? (
               <img src="/product.png" alt={title} className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" />
             ) : (
